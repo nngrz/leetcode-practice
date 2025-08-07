@@ -12,22 +12,37 @@
 // };
 
 // Solution2: Two-pass Hash Table
+// var twoSum = function(nums, target) {
+//     const map = new Map();
+//     for (let i = 0; i < nums.length; i++) {
+//         map.set(nums[i], i);
+//     }
+
+//     for (let i = 0; i < nums.length; i++) {
+//         const complement = target - nums[i];
+//         if (map.has(complement) && map.get(complement) !== i) {
+//             return [i, map.get(complement)];
+//         }
+//     }
+
+//     // If no valid pair is found, return empty array
+//     return [];
+// };
+
+// Solution3: One-pass Hash Table
 var twoSum = function(nums, target) {
     const map = new Map();
     for (let i = 0; i < nums.length; i++) {
-        map.set(nums[i], i);
-    }
-
-    for (let i = 0; i < nums.length; i++) {
         const complement = target - nums[i];
-        if (map.has(complement) && map.get(complement) !== i) {
-            return [i, map.get(complement)];
+        if (map.has(complement)) {
+            return [map.get(complement), i];
         }
+        map.set(nums[i], i);
     }
 
     // If no valid pair is found, return empty array
     return [];
-};
+}
 
 // Test 1
 const nums1 = [2,7,11,15];
