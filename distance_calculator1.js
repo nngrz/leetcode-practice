@@ -19,13 +19,8 @@ var distance_calculator = function(distance) {
     return result;
 }
 
-const distance1 = 1;
 console.log(distance_calculator(1));
-
-const distance2 = 2;
 console.log(distance_calculator(2));
-
-const distance3 = 3;
 console.log(distance_calculator(3));
 
 // Question:
