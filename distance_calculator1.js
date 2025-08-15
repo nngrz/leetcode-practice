@@ -27,3 +27,12 @@ console.log(distance_calculator(2));
 
 const distance3 = 3;
 console.log(distance_calculator(3));
+
+// Question:
+// I can walk by having a 1m, or 2m, or 3m step (for each type of step I can only walk once). 
+// Given the distance(D in meters),
+// how many different ways I have to go this path.
+
+// For D=1 result =1
+// For D=2 result=2 (2)
+// For D=3 result=4 (1+2: 3; 3)
