@@ -3,12 +3,12 @@ var containsDuplicate = function(nums) {
 
     for (let i = 0; i < nums.length; i++) {
         if (numsMap.has(nums[i])) {
-            return false;
+            return true;
         } else {
             numsMap.set(nums[i], i);
         }
     }
-    return true;
+    return false;
 }
 
 console.log(containsDuplicate([1,2,3,1]));
