@@ -31,11 +31,11 @@ function solveDigitChallenge(slots, expr, target) {
   return out;
 }
 
-const sols1 = solveDigitChallenge(3, ([A,B,C]) => A + B*C, 46);
-console.log("Sols 1: ", sols1);
+// const sols1 = solveDigitChallenge(3, ([A,B,C]) => A + B*C, 46);
+// console.log("Sols 1: ", sols1);
 
-const sols2 = solveDigitChallenge(4, ([A,B,C,D]) => A*B - C - D, 55);
-console.log("Sols 2: ", sols2);
+// const sols2 = solveDigitChallenge(4, ([A,B,C,D]) => A*B - C - D, 55);
+// console.log("Sols 2: ", sols2);
 
-const sols3 = solveDigitChallenge(4, ([A,B,C,D]) => A - B + C - D, 14);
-console.log("Sols 3: ", sols3);
+// const sols3 = solveDigitChallenge(4, ([A,B,C,D]) => A - B + C - D, 14);
+// console.log("Sols 3: ", sols3);
