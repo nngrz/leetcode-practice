@@ -1,5 +1,6 @@
 class Solution {
     public int missingNumber(int[] nums) {
+        /* 1
         int n = nums.length;
         // range [0, n], in total n+1 numbers
         for (int i = 0; i <= n; i++) {
@@ -19,6 +20,25 @@ class Solution {
             }
         }
         return -1;
+        */
+
+        // 2
+        int n = nums.length;
+
+        int expectedSum = 0; // sum of numbers in the range
+        int actualSum = 0; // sum of numbers in the given array nums[]
+        // count expectedSum
+        for (int i = 0; i <= n; i++) {
+            expectedSum += i;
+        }
+
+        // count actuaSum
+        for (int i = 0; i < n; i++) {
+            actualSum += nums[i];
+        }
+
+        int missingNumber = expectedSum - actualSum;
+        return missingNumber;
     }
 }
 
