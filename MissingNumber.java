@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.stream.IntStream;
+
 class Solution {
     public int missingNumber(int[] nums) {
         /* 1
@@ -22,7 +25,7 @@ class Solution {
         return -1;
         */
 
-        // 2
+        /* 2
         int n = nums.length;
 
         int expectedSum = 0; // sum of numbers in the range
@@ -39,6 +42,16 @@ class Solution {
 
         int missingNumber = expectedSum - actualSum;
         return missingNumber;
+
+        */
+
+        // 3
+        int n = nums.length;
+
+        int expectedSum = IntStream.rangeClosed(0, n).reduce(0, Integer::sum);
+        int actualSum = Arrays.stream(nums).reduce(0, Integer::sum);
+
+        return expectedSum - actualSum;
     }
 }
 
