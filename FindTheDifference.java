@@ -3,6 +3,9 @@ class Solution {
 
         int[] count = new int[26];
 
+        // c - 'a' maps a letter to an index:
+        // 'a' -> 0, 'b' -> 1, ..., 'z' -> 25
+        // count[c - 'a']++ increases the frequency of that character by 1
         for (char c : s.toCharArray()) {
             count[c - 'a']++;
         }
