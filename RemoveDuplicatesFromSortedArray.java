@@ -2,13 +2,21 @@ import java.util.Arrays;
 
 class Solution {
     public int removeDuplicates(int[] nums) {
-        // l1 = max + 1
-        int l1 = nums[nums.length - 1];
-        int[] counts = new int[l1];
 
-        return -1;
+        if (nums.length == 0) {
+            return 0;
+        }
 
+        int index = 1;
 
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] != nums[index - 1]) {
+                nums[index] = nums[i];
+                index++;
+            }
+        }
+
+        return index;
     }
 }
 
