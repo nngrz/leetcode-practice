@@ -1,7 +1,21 @@
 class Solution {
     public long maxTotalValue(int[] nums, int k) {
-        // 在这里补你自己的 solution 代码
-        return 0L;
+        // Best subarray value = max - min
+        // Since the same subarray can be chosen more than once,
+        // choose that best subarray k times.
+        long max = nums[0];
+        long min = nums[0];
+        for (int num : nums) {
+
+            if (num > max) {
+                max = num;
+            }
+
+            if (num < min) {
+                min = num;
+            }
+        }
+        return (max - min) * k;
     }
 }
 
