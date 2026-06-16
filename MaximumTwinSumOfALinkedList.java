@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 class ListNode {
     int val;
     ListNode next;
@@ -16,8 +18,27 @@ class ListNode {
 
 class Solution {
     public int pairSum(ListNode head) {
-        // TODO
-        return 0;
+        ArrayList<Integer> list = new ArrayList<>();
+
+        while (head != null) {
+            list.add(head.val);
+            head = head.next;
+        }
+
+        int left = 0;
+        int right = list.size() - 1;
+        int max = 0;
+
+        while (left < right) {
+            int sum = list.get(left) + list.get(right);
+            if (sum > max) {
+                max = sum;
+            }
+            left++;
+            right--;
+        }
+
+        return max;
     }
 }
 
