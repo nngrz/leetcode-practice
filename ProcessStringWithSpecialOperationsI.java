@@ -18,11 +18,7 @@ class Solution {
                 result.append(result.toString());
 
             } else if (currentElement == '%') {
-                reversedStr = "";
-                for (int j = 0; j < result.length(); j++) {
-                    reversedStr = result.charAt(j) + reversedStr;
-                }
-                result = new StringBuilder(reversedStr);
+                result.reverse(); 
             }
         }
 
