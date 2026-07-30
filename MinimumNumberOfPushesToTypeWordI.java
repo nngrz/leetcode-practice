@@ -1,7 +1,16 @@
 class Solution {
     public int minimumPushes(String word) {
-        // TODO
-        return 0;
+        int wordLen = word.length();
+
+        if (wordLen <= 8) {
+            return wordLen;
+        } else if (wordLen > 8 && wordLen < 16) {
+            return (1 * 8) + (wordLen % 8) * 2;
+        } else if (wordLen >= 16 && wordLen < 24) {
+            return (1 + 2) * 8 + (wordLen % 8) * 3;
+        } else {
+            return (1 + 2 + 3) * 8 + (wordLen % 8) * 4;
+        }
     }
 }
 
